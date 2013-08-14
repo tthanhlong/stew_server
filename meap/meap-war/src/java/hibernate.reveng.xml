@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="stewdb"/>
+  <table-filter match-name="datasynctracking"/>
+  <table-filter match-name="deviceregister"/>
+  <table-filter match-name="usergroupdetail"/>
+  <table-filter match-name="log"/>
+  <table-filter match-name="messagesent"/>
+  <table-filter match-name="appuser"/>
+  <table-filter match-name="role"/>
+  <table-filter match-name="message"/>
+  <table-filter match-name="group"/>
+  <table-filter match-name="user"/>
+  <table-filter match-name="userdata"/>
+</hibernate-reverse-engineering>

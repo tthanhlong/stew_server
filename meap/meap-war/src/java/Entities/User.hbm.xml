@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 14, 2013 9:29:26 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="Entities.User" table="user" catalog="stewdb">
+        <id name="userId" type="string">
+            <column name="userID" length="32" />
+            <generator class="assigned" />
+        </id>
+        <property name="passwordHash" type="string">
+            <column name="passwordHash" length="32" not-null="true" />
+        </property>
+        <property name="userToken" type="string">
+            <column name="userToken" length="32" not-null="true" />
+        </property>
+        <property name="tokenExpireDate" type="timestamp">
+            <column name="tokenExpireDate" length="19" not-null="true" />
+        </property>
+        <property name="loginDate" type="timestamp">
+            <column name="loginDate" length="19" not-null="true" />
+        </property>
+        <property name="defaultTokenAge" type="int">
+            <column name="defaultTokenAge" not-null="true" />
+        </property>
+        <property name="roleId" type="string">
+            <column name="roleID" length="10" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

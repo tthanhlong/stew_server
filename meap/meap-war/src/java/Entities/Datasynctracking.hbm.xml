@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 14, 2013 9:29:26 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="Entities.Datasynctracking" table="datasynctracking" catalog="stewdb">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="userId" type="string">
+            <column name="userID" length="32" not-null="true" />
+        </property>
+        <property name="deviceUdid" type="string">
+            <column name="deviceUDID" length="32" not-null="true" />
+        </property>
+        <property name="appId" type="string">
+            <column name="appID" length="32" not-null="true" />
+        </property>
+        <property name="appVersion" type="int">
+            <column name="appVersion" not-null="true" />
+        </property>
+        <property name="dataToSyncXml" type="string">
+            <column name="dataToSyncXML" length="65535" not-null="true" />
+        </property>
+        <property name="syncDate" type="timestamp">
+            <column name="syncDate" length="19" not-null="true" />
+        </property>
+        <property name="transactionId" type="string">
+            <column name="transactionID" length="32" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

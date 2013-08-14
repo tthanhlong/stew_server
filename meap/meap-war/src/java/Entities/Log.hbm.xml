@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 14, 2013 9:29:26 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="Entities.Log" table="log" catalog="stewdb">
+        <composite-id name="id" class="Entities.LogId">
+            <key-property name="id" type="string">
+                <column name="id" length="32" />
+            </key-property>
+            <key-property name="userId" type="string">
+                <column name="userID" length="32" />
+            </key-property>
+        </composite-id>
+        <property name="messageLog" type="string">
+            <column name="messageLog" length="65535" not-null="true" />
+        </property>
+        <property name="timeLog" type="timestamp">
+            <column name="TimeLog" length="19" not-null="true" />
+        </property>
+        <property name="appId" type="string">
+            <column name="appID" length="32" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
